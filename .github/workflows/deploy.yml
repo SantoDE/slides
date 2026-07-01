@@ -69,7 +69,10 @@ jobs:
         run: npm run build -- --base /from-clusters-to-controlplanes/
 
       - name: Assemble site
-        run: mkdir -p _site && cp -r decks/clusters-hcp-demo/slides/dist _site/from-clusters-to-controlplanes
+        run: |
+          mkdir -p _site
+          cp -r decks/clusters-hcp-demo/slides/dist _site/from-clusters-to-controlplanes
+          cp _site/from-clusters-to-controlplanes/index.html _site/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
