@@ -1,0 +1,1 @@
+var e=`/from-clusters-to-controlplanes/cc-logo.png`;export{e as t};
